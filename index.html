@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="logo.png" type="image/x-icon">
+  <title>LineUI 演示</title>
+
+  <link rel="stylesheet" href="LineUI.css">
+</head>
+
+<body>
+  <div class="nav">
+    <nav>
+      <a href="/">Line UI</a>
+    </nav>
+    <div>
+      <input type="search" placeholder="搜索...">
+    </div>
+  </div>
+
+  <div class="row margin-0-auto max-width-800">
+    <div class="col-2-sm">
+      <h3 class="text-primary">组件</h3>
+    </div>
+    <main class="col-8-sm">
+      <section>
+        <h3 class="underline">按钮 <span class="text-muted">Button</span></h3>
+
+        <p>进行任何操作都需要的基础控件。</p>
+        <p class="text-primary">基础按钮</p>
+
+        <div class="flex gap">
+          <button class="button">初级按钮</button>
+          <button class="safe-button">安全按钮</button>
+          <button class="warning-button">警告按钮</button>
+          <button class="danger-button">危险按钮</button>
+          <button class="light-button">次要按钮</button>
+          <button disabled>disabled</button>
+        </div>
+      </section>
+
+      <section>
+        <h3 class="underline">卡片 <span class="text-muted">Card</span></h3>
+
+        <p>醒目的颜色配上重要的文字。</p>
+
+        <div class="card">
+          <header>初级卡片</header>
+          <main>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, sed quis impedit nesciunt rem cum, dolores
+            autem necessitatibus, quam vitae provident. Sit pariatur temporibus perspiciatis earum placeat ad voluptate
+            sed.
+          </main>
+        </div>
+        <div class="card safe-card">
+          <header>安全卡片</header>
+          <main>
+            这是一个安全卡片。
+          </main>
+        </div>
+        <div class="card warning-card">
+          <header>警告卡片</header>
+          <main>
+            这是一个警告卡片。
+          </main>
+        </div>
+        <div class="card danger-card">
+          <header>危险卡片</header>
+          <main>
+            这是一个危险卡片。
+          </main>
+        </div>
+      </section>
+
+      <section>
+        <h3 class="underline">表单 <span class="text-muted">Form</span></h3>
+
+        <p>收集信息的常用方式。</p>
+        <p class="text-primary">输入域</p>
+
+        <div class="form row-form">
+          <div class="form-item">
+            <input class="font-normal" type="text" id="last_name">
+            <label for="last_name">姓</label>
+          </div>
+          <div class="form-item">
+            <input class="font-normal" type="text" id="first_name">
+            <label for="first_name">名</label>
+          </div>
+        </div>
+        <div class="form">
+          <div class="form-item">
+            <input class="font-normal" type="text" id="email">
+            <label for="email">电子邮箱地址</label>
+          </div>
+          <div class="form-item">
+            <input class="font-normal" type="password" id="password">
+            <label for="password">密码</label>
+          </div>
+        </div>
+
+        <p class="text-primary">文本域</p>
+
+        <div class="form">
+          <div class="form-item">
+            <textarea name="textarea" id="intro"></textarea>
+            <label for="intro">个性签名</label>
+          </div>
+        </div>
+
+      </section>
+
+      <section>
+        <h3 class="underline">折叠层 <span class="text-muted">Collapsible</span></h3>
+
+        <p>折叠信息而节约屏幕空间。</p>
+
+        <div class="collapse">
+          <div class="collapse-item">
+            <header>标题 1</header>
+            <main>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, sed quis impedit nesciunt rem cum,
+              dolores
+              autem necessitatibus, quam vitae provident. Sit pariatur temporibus perspiciatis earum placeat ad
+              voluptate
+              sed.
+            </main>
+          </div>
+          <div class="collapse-item">
+            <header>标题 2</header>
+            <main class="hidden" aria-hidden="true">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, sed quis impedit nesciunt rem cum,
+              dolores
+              autem necessitatibus, quam vitae provident. Sit pariatur temporibus perspiciatis earum placeat ad
+              voluptate
+              sed.
+            </main>
+          </div>
+          <div class="collapse-item">
+            <header>标题 3</header>
+            <main>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, sed quis impedit nesciunt rem cum,
+              dolores
+              autem necessitatibus, quam vitae provident. Sit pariatur temporibus perspiciatis earum placeat ad
+              voluptate
+              sed.
+            </main>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h3 class="underline">徽章</h3>
+
+      </section>
+    </main>
+  </div>
+
+  <script src="/scripts/LineUI.js" type="module"></script>
+
+</body>
+
+</html>
