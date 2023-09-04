@@ -2,20 +2,19 @@
   color-scheme: light dark;
   /* --theme-color: #2f5694; */
   --theme-color: #007bff;
-  --font-light-color: #eee;
-  --font-dark-color: #333;
+  --font-color: #333;
 
-  --light-gray-1: #b6b6b6;
-  --light-gray-2: #e6e6e6;
-  --light-gray-3: #efefef;
-  /* input hover focus */
-  --dark-gray-1: #2a2a2a;
-  --dark-gray-2: #454545;
-  --dark-gray-3: #252525;
+  --gray-1: #f6f6f6;
+  --gray-2: #e5e5e5;
+  --gray-3: #d4d4d4;
+  --gray-4: #c2c2c2;
+  --gray-5: #b6b6b6;
+  --gray-6: #a1a1a1;
 
-  --light-background-color: #f6f6f6;
-  --dark-background-color: #1d2021;
-  --dark-navigator-color: #181a1b;
+  --background-color: #f6f6f6;
+
+  --navigator-color: white;
+
   --dark-light-button-color: rgba(12, 12, 12, 0.9);
 
   --disabled-color: #777;
@@ -35,7 +34,7 @@ body {
   overflow-x: hidden;
   font-size: var(--font-size);
   color: var(--font-dark-color);
-  background-color: var(--light-background-color);
+  background-color: var(--background-color);
   font-family: -apple-system, BlinkMacSystemFont, Helvetica Neue, PingFang SC,
     Microsoft YaHei, Source Han Sans SC, Noto Sans CJK SC, WenQuanYi Micro Hei,
     sans-serif;
@@ -46,12 +45,12 @@ button {
   border: none;
   background-color: var(--theme-color);
   cursor: pointer;
-  color: var(--font-light-color);
+  color: white;
   padding: 0.5rem 0.85rem;
   font-size: inherit;
 }
 
-button:not(:disabled) {
+button:not(:disabled):hover {
   box-shadow: inset 0 0 0 99em rgba(255, 255, 255, 0.2);
 }
 
@@ -65,21 +64,21 @@ button:disabled {
   cursor: not-allowed;
 }
 
-input {
-  border: 1px solid var(--light-gray-1);
-  /* border-bottom: var(--border-outline-width) solid var(--light-gray-1); */
-  /* padding: .5rem; */
+input, textarea {
+  border: 1px solid var(--gray-5);
   outline: none;
   background: none;
-  padding: 0px 6px;
+  padding: 8px;
+  resize: vertical;
 }
 
 input[type="search"] {
   padding: 8px;
-  background-color: var(--light-gray-2);
+  background-color: var(--gray-1);
 }
 
-input:focus {
+input:focus,
+textarea:focus {
   /* border-bottom: var(--border-outline-width) solid var(--theme-color); */
   border: 1px solid var(--theme-color);
 }
@@ -87,20 +86,6 @@ input:focus {
 input:checked {
   outline: var(--border-outline-width) solid var(--theme-color);
   outline-offset: var(--outline-offset);
-}
-
-textarea {
-  border: none;
-  width: 100%;
-  border-bottom: var(--border-outline-width) solid var(--light-gray-1);
-  outline: none;
-  background: none;
-  resize: none;
-  font-family: inherit;
-}
-
-textarea:focus {
-  border-bottom: var(--border-outline-width) solid var(--theme-color);
 }
 
 a {
@@ -127,7 +112,7 @@ a {
 }
 
 .light-button:hover {
-  background-color: var(--light-gray-2);
+  background-color: var(--gray-2);
 }
 
 /* 卡片 */
@@ -138,13 +123,13 @@ a {
 .card header {
   padding: 0.5rem;
   background-color: var(--theme-color);
-  color: var(--font-light-color);
+  color: white;
 }
 
 .card main {
   padding: 0.5rem;
   border: var(--border-outline-width) solid var(--theme-color);
-  background-color: white;
+  /* background-color: var(--gray-1); */
 }
 
 .safe-card header {
@@ -193,7 +178,7 @@ a {
 }
 
 .text-muted {
-  color: var(--light-gray-1);
+  color: var(--gray-5);
   font-size: 1rem;
 }
 
@@ -220,7 +205,7 @@ a {
   display: flex;
   position: relative;
   flex-direction: column;
-  margin: 1rem 0;
+  margin: 0.8rem 0;
 }
 
 .form-item input {
@@ -231,18 +216,18 @@ a {
   position: absolute;
   transition: transform 0.2s ease-out, color 0.2s ease-out,
     -webkit-transform 0.2s ease-out;
-  color: var(--light-gray-1);
+  color: var(--gray-5);
   cursor: text;
   transform-origin: top left;
-  top: 6px;
+  top: 15px;
   left: 10px;
   padding: 0px 2px;
 }
 
 .form-focus label {
-  transform: translateY(-16px) scale(0.8);
+  transform: translateY(-23px) scale(0.8);
   color: var(--theme-color);
-  background-color: var(--light-background-color);
+  background-color: var(--background-color);
 }
 
 .form-option {
@@ -252,7 +237,7 @@ a {
 }
 
 .form-filled {
-  color: var(--light-gray-1) !important;
+  color: var(--gray-5) !important;
 }
 
 /* 折叠层 */
@@ -265,14 +250,14 @@ a {
 .collapse-item header {
   padding: 1rem;
   cursor: pointer;
-  background-color: white;
-  border-top: 1px solid var(--light-gray-2);
-  border-bottom: 1px solid var(--light-gray-2);
+  background-color: var(--gray-1);
+  border-top: 1px solid var(--gray-3);
+  border-bottom: 1px solid var(--gray-3);
 }
 
 .collapse-item main {
   padding: 1rem;
-  background-color: var(--light-gray-3);
+  background-color: var(--gray-2);
 }
 
 .hidden {
@@ -321,7 +306,7 @@ a {
 
 .bg-primary {
   background-color: var(--theme-color);
-  color: var(--font-light-color);
+  color: var(--font-color);
 }
 
 .bg-safe {
@@ -343,7 +328,7 @@ a {
   justify-content: space-between;
   align-items: center;
   box-shadow: var(--box-shadow);
-  background-color: white;
+  background-color: var(--navigator-color);
   position: sticky;
   top: 0px;
   z-index: 1000;
@@ -365,7 +350,7 @@ a {
 
 .nav-menu .active {
   background-color: var(--theme-color);
-  color: var(--font-light-color);
+  color: var(--font-color);
 }
 
 /* 工具类 */
@@ -380,55 +365,23 @@ a {
 
 /* 深色模式 */
 @media (prefers-color-scheme: dark) {
-  body {
-    color: var(--font-light-color);
-    background-color: var(--dark-background-color);
-  }
+  :root {
+    --font-color: #eee;
 
-  input {
-    background: none;
-    border-bottom: var(--border-outline-width) solid var(--dark-gray-2);
-  }
+    --gray-1: #252525;
+    --gray-2: #2a2a2a;
+    --gray-3: #323232;
+    --gray-4: #454545;
+    --gray-5: #575757;
+    --gray-6: #656565;
 
-  textarea {
-    background: none;
-    border-bottom: var(--border-outline-width) solid var(--dark-gray-2);
-  }
+    --background-color: #1d2021;
 
-  input[type="search"] {
-    padding: 8px;
-    background-color: var(--dark-gray-3);
-  }
+    --navigator-color: #181a1b;
 
-  input:focus {
-    border-bottom: var(--border-outline-width) solid var(--theme-color);
-  }
-
-  .nav {
-    background-color: var(--dark-navigator-color);
-  }
-
-  .nav-menu a {
-    color: var(--font-light-color);
-  }
-
-  .light-button:hover {
-    background-color: var(--dark-light-button-color);
-  }
-
-  .card main {
-    background-color: var(--dark-gray-1);
-  }
-
-  .collapse-item header {
-    border-top: 1px solid var(--dark-gray-2);
-    border-bottom: 1px solid var(--dark-gray-2);
-    background-color: var(--dark-gray-1);
-  }
-
-  .collapse-item main {
-    padding: 1rem;
-    background-color: var(--dark-gray-2);
+    .light-button:hover {
+      background-color: var(--dark-light-button-color);
+    }
   }
 }
 
