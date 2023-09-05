@@ -66,12 +66,15 @@ button:disabled {
   cursor: not-allowed;
 }
 
-input, textarea {
+input,
+textarea {
   border: 1px solid var(--gray-6);
   outline: none;
   background-color: transparent;
   padding: 8px;
   resize: vertical;
+  min-height: 32px;
+  font-family: inherit;
 }
 
 input[type="search"] {
@@ -156,6 +159,26 @@ a {
 
 .danger-card main {
   border: var(--border-outline-width) solid var(--danger-color);
+}
+
+/* 横幅 */
+.alert {
+  color: white;
+  padding: 10px;
+  margin: 10px 0px;
+  background-color: var(--theme-color);
+}
+
+.alert-safe {
+  background-color: var(--safe-color);
+}
+
+.alert-warning {
+  background-color: var(--warning-color);
+}
+
+.alert-danger {
+  background-color: var(--danger-color);
 }
 
 /* 字体 */

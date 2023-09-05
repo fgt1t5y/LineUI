@@ -32,12 +32,12 @@
         <p class="text-primary">基础按钮</p>
 
         <div class="flex gap-10">
-          <button class="button">初级按钮</button>
-          <button class="safe-button">安全按钮</button>
-          <button class="warning-button">警告按钮</button>
-          <button class="danger-button">危险按钮</button>
-          <button class="light-button">次要按钮</button>
-          <button disabled>disabled</button>
+          <button class="button" type="button">初级按钮</button>
+          <button class="safe-button" type="button">安全按钮</button>
+          <button class="warning-button" type="button">警告按钮</button>
+          <button class="danger-button" type="button">危险按钮</button>
+          <button class="light-button" type="button">次要按钮</button>
+          <button disabled type="button">disabled</button>
         </div>
       </section>
 
@@ -152,8 +152,14 @@
       </section>
 
       <section>
-        <h3 class="underline">徽章</h3>
+        <h3 class="underline">横幅 <span class="text-muted">Alert</span></h3>
 
+        <p>使用醒目的背景警示用户。</p>
+
+        <div class="alert">这是一个初级横幅。</div>
+        <div class="alert alert-safe">这是一个安全横幅。</div>
+        <div class="alert alert-warning">这是一个警告横幅。</div>
+        <div class="alert alert-danger">这是一个危险横幅。</div>
       </section>
     </main>
   </div>
